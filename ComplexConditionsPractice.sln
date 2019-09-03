@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointInFigure", "PointInFigure\PointInFigure.csproj", "{456ACB86-7B06-4E67-8B9C-68068BE46632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointInFigure", "PointInFigure\PointInFigure.csproj", "{456ACB86-7B06-4E67-8B9C-68068BE46632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointAndRectangle", "PointInRectableGUIApp\PointAndRectangle.csproj", "{4EAE1E44-2F64-476D-BF15-AF053D59A63B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamTime", "ExamTime\ExamTime.csproj", "{8901A0DD-942F-4CD4-998F-FA22CC27374C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{456ACB86-7B06-4E67-8B9C-68068BE46632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{456ACB86-7B06-4E67-8B9C-68068BE46632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{456ACB86-7B06-4E67-8B9C-68068BE46632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAE1E44-2F64-476D-BF15-AF053D59A63B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAE1E44-2F64-476D-BF15-AF053D59A63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAE1E44-2F64-476D-BF15-AF053D59A63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAE1E44-2F64-476D-BF15-AF053D59A63B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8901A0DD-942F-4CD4-998F-FA22CC27374C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8901A0DD-942F-4CD4-998F-FA22CC27374C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8901A0DD-942F-4CD4-998F-FA22CC27374C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8901A0DD-942F-4CD4-998F-FA22CC27374C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
