@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointInFigure", "PointInFig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointAndRectangle", "PointInRectableGUIApp\PointAndRectangle.csproj", "{4EAE1E44-2F64-476D-BF15-AF053D59A63B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamTime", "ExamTime\ExamTime.csproj", "{8901A0DD-942F-4CD4-998F-FA22CC27374C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamTime", "ExamTime\ExamTime.csproj", "{8901A0DD-942F-4CD4-998F-FA22CC27374C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trip", "Trip\Trip.csproj", "{3F83306D-BDFD-4918-B28B-DAD62E2A511B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8901A0DD-942F-4CD4-998F-FA22CC27374C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8901A0DD-942F-4CD4-998F-FA22CC27374C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8901A0DD-942F-4CD4-998F-FA22CC27374C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F83306D-BDFD-4918-B28B-DAD62E2A511B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F83306D-BDFD-4918-B28B-DAD62E2A511B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F83306D-BDFD-4918-B28B-DAD62E2A511B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F83306D-BDFD-4918-B28B-DAD62E2A511B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
