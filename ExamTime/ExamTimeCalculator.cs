@@ -6,49 +6,52 @@ namespace ExamTime
 {
     public class ExamTimeCalculator
     {
-        public static void Calculate(int startHours, int startMinutes, int arrivalHours, int arrivalMinutes)
+        public static void Calculate(int examHour, int examMinutes, int arrivalHours, int arrivalMinutes)
         {
             string late = "Late";
             string onTime = "On time";
             string early = "Early";
 
-            int startTime = startHours * 60 + startMinutes;
-            int arrivalTime = arrivalHours * 60 + arrivalMinutes;
+            int examTime = (examHour * 60) + examMinutes;
+            int arrivalTime = (arrivalHours) * 60 + arrivalMinutes;
+            int timeDifference = arrivalTime - examTime;
 
-            int arrivalTimeDifference = Math.Abs(startTime - arrivalTime);
-            int hours = arrivalTimeDifference / 60;
-            int minutes = arrivalTimeDifference % 60;
-            if (startTime < arrivalTime)
+            string studentArival = late;
+            if (timeDifference < -30)
             {
-                Console.WriteLine(late);
-                if (startTime - arrivalTime > 59)
+                studentArival = early;
+            }
+            else if (timeDifference <= 0 && timeDifference <= 30)
+            {
+                studentArival = onTime;
+            }
+
+            string result = string.Empty;
+            if (timeDifference != 0)
+            {
+                int hours = Math.Abs(timeDifference / 60);
+                int minutes = Math.Abs(timeDifference % 60);
+                if (hours > 0)
                 {
-                    Console.WriteLine("{0}:{1:D2} hours after the start", hours, minutes);
+                    result = $"{hours}:{minutes:00} hours ";
                 }
                 else
                 {
-                    Console.WriteLine("{0} minutes after the start", minutes);
+                    result = $"{minutes} minutes ";
                 }
-            }
-            else if (startTime >= arrivalTime && startTime - arrivalTime <= 30)
-            {
-                Console.WriteLine(onTime);
-                if (startTime - arrivalTime > 0)
+                if (timeDifference < 0)
                 {
-                    Console.WriteLine("{0} minutes before the start", minutes);
-                }
-            }
-            else if (startTime > arrivalTime && startTime - arrivalTime > 30)
-            {
-                Console.WriteLine(early);
-                if (startTime - arrivalTime > 59)
-                {
-                    Console.WriteLine("{0}:{1:D2} hours before the start", hours, minutes);
+                    result += "before the start";
                 }
                 else
                 {
-                    Console.WriteLine("{0} minutes before the start", minutes);
+                    result += "after the start";
                 }
+            }
+            Console.WriteLine(studentArival);
+            if (!string.IsNullOrEmpty(result))
+            {
+                Console.WriteLine(result);
             }
         }
     }
