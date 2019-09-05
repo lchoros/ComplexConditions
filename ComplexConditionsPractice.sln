@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointAndRectangle", "PointI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamTime", "ExamTime\ExamTime.csproj", "{8901A0DD-942F-4CD4-998F-FA22CC27374C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trip", "Trip\Trip.csproj", "{3F83306D-BDFD-4918-B28B-DAD62E2A511B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trip", "Trip\Trip.csproj", "{3F83306D-BDFD-4918-B28B-DAD62E2A511B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersOperations", "NumbersOperations\NumbersOperations.csproj", "{430171AC-ECDD-4C1D-B5B9-F069D295832D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3F83306D-BDFD-4918-B28B-DAD62E2A511B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F83306D-BDFD-4918-B28B-DAD62E2A511B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F83306D-BDFD-4918-B28B-DAD62E2A511B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430171AC-ECDD-4C1D-B5B9-F069D295832D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430171AC-ECDD-4C1D-B5B9-F069D295832D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430171AC-ECDD-4C1D-B5B9-F069D295832D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430171AC-ECDD-4C1D-B5B9-F069D295832D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,48 +9,40 @@ namespace Trip
             decimal budget = decimal.Parse(Console.ReadLine());
 
             string season = Console.ReadLine();
-            string destination = "Balkans";
-            string vacationType = "Camp";
-            int expensesPercent = 0;
-
-            if(season == "winter")
-            {
-                vacationType = "Hotel";
-            }
+            string destinationResult = "Europe";
+            string holidayInformation = "Hotel";
+            decimal moneySpent = 0.00M;
+            moneySpent = budget * 0.9M;
 
             if(budget <= 100)
             {
-                destination = "Bulgaria";
-                if(season == "summer")
+                destinationResult = "Bulgaria";
+                if(season == "winter")
                 {
-                    expensesPercent = 30;
+                    moneySpent = budget * 0.7M;    
                 }
                 else
                 {
-                    expensesPercent = 70;
+                    holidayInformation = "Camp";
+                    moneySpent = budget * 0.3M;
                 }
-            }
-            else if(budget > 100 && budget < 1000)
+             }
+            else if(budget > 100 && budget <= 1000)
             {
-                if (season == "summer")
+                destinationResult = "Balkans";
+                if (season == "winter")
                 {
-                    expensesPercent = 40;
+                    moneySpent = budget * 0.8M;
                 }
                 else
                 {
-                    expensesPercent = 80;
+                    holidayInformation = "Camp";               
+                    moneySpent = budget * 0.4M;
                 }
-            }
-            else if(budget > 1000)
-            {
-                destination = "Europe";
-                vacationType = "Hotel";
-                expensesPercent = 90;
             }
 
-            decimal moneySpent = budget * expensesPercent / 100;
-            Console.WriteLine("Somewhere in {0}", destination);
-            Console.WriteLine("{0} - {1:F2}", vacationType, moneySpent);
+            Console.WriteLine("Somewhere in {0}", destinationResult);
+            Console.WriteLine("{0} - {1:F2}", holidayInformation, moneySpent);
         }
     }
 }
