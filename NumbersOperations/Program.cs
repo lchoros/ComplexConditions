@@ -8,60 +8,38 @@ namespace NumbersOperations
         {
             decimal n1 = int.Parse(Console.ReadLine());
             decimal n2 = int.Parse(Console.ReadLine());
-            string character = Console.ReadLine();
+            string nOperator = Console.ReadLine();
             string output = string.Empty;
             decimal result = 0.00M;
-
-            if(character.Equals("+"))
+            if (n2 == 0 && (nOperator.Equals("/") || nOperator.Equals("%")))
             {
-                result = n1 + n2;
-                output += $"{n1} {character} {n2} = {result} - ";
+                output = $"Cannot divide {n1} by zero";
             }
-            else if(character.Equals("-"))
+            else if (nOperator.Equals("/"))
             {
-                result = n1 - n2;
-                output += $"{n1} {character} {n2} = {result} - ";
-
+                result = n1 / n2;
+                output = $"{n1} {nOperator} {n2} = {result:F2}";
             }
-            else if(character.Equals("*"))
+            else if (nOperator.Equals("%"))
             {
-                result = n1 * n2;
-                output += $"{n1} {character} {n2} = {result} - ";
+                result = n1 % n2;
+                output = $"{n1} {nOperator} {n2} = {result}";
             }
-            if (character.Equals("+") || character.Equals("-") || character.Equals("*"))
+            else
             {
-                if(result % 2 == 0)
+                if (nOperator.Equals("+"))
                 {
-                    output += "even";
+                    result = n1 + n2;
                 }
-                else
+                else if (nOperator.Equals("-"))
                 {
-                    output += "odd";
+                    result = n1 - n2;
                 }
-            }
-            else if (character.Equals("%"))
-            {
-                if(n2 != 0)
+                else if (nOperator.Equals("*"))
                 {
-                    result = n1 % n2;
-                    output += $"{n1} % {n2} = {result}";
+                    result = n1 * n2;
                 }
-                else
-                {
-                    output = $"Cannot divide {n1} by zero";
-                }
-            }
-            else if (character.Equals("/"))
-            {
-                if (n2 != 0)
-                {
-                    result = n1 / n2;
-                    output += $"{n1} / {n2} = {result}";
-                }
-                else
-                {
-                    output = $"Cannot divide {n1} by zero";
-                }
+                output = string.Format("{0} {1} {2} = {3} - {4}", n1, nOperator, n2, result, result % 2 == 0 ? "even" : "odd");
             }
             Console.WriteLine(output);
         }
